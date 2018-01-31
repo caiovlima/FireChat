@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sala</ion-title>
+    <ion-buttons end="">
+      <button ion-button="" icon-only="" (click)="adicionarSala()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding="">
+  <ion-list>
+    <ion-item *ngfor="let sala of salas">
+      {{sala.nome}}
+      <ion-icon name="chatboxes" item-end="" (click)="acessarSala(sala.key)"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

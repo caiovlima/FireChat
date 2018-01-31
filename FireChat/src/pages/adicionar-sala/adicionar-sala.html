@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Adicionar Sala</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+ 
+<ion-content padding="">
+  <form (ngsubmit)="adicionarSala()">
+    <ion-list>
+      <ion-item>
+        <ion-label floating="">Nome da sala</ion-label>
+        <ion-input type="text" [(ngmodel)]="data.nome" name="nome" required=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button="" full="" round="" color="secondary" type="submit">Adicionar</button>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
