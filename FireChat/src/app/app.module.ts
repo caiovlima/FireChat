@@ -6,19 +6,30 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { CadastroPage } from '../pages/cadastro/cadastro';
+import { SalaPage } from './../pages/sala/sala';
+import { AdicionarSalaPage } from './../pages/adicionar-sala/adicionar-sala';
+
 
 @NgModule({
   declarations: [
     MyApp,
+    CadastroPage,
+    SalaPage,
+    AdicionarSalaPage,
     HomePage
   ],
   imports: [
-    BrowserModule,
+
+  BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    CadastroPage,
+    SalaPage,
+    AdicionarSalaPage,
     HomePage
   ],
   providers: [

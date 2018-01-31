@@ -5,11 +5,11 @@
 </ion-header>
  
 <ion-content padding="">
-  <form (ngsubmit)="acessarNickname()">
+  <form (ngSubmit)="acessarNickname()">
     <ion-list>
       <ion-item>
         <ion-label floating="">Preencha o seu Nickname</ion-label>
-        <ion-input type="text" [(ngmodel)]="data.nickname" name="nickname" required=""></ion-input>
+        <ion-input type="text" [(ngModel)]="data.nickname" name="nickname" required=""></ion-input>
       </ion-item>
       <ion-item>
         <button ion-button="" full="" round="" color="secondary" type="submit">Cadastrar</button>

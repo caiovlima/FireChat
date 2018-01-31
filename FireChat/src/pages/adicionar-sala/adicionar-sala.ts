@@ -8,6 +8,8 @@ import * as firebase from 'firebase';
   templateUrl: 'adicionar-sala.html',
 })
 export class AdicionarSalaPage {
+  /*Agora adicione a seguinte variável diretamente acima do constructor
+   para armazenar o nome da sala e acessá-la*/
   data = { nome:'' };
   ref = firebase.database().ref('salas/');
  

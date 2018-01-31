@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Sala</ion-title>
     <ion-buttons end="">
       <button ion-button="" icon-only="" (click)="adicionarSala()">
@@ -11,7 +11,7 @@
  
 <ion-content padding="">
   <ion-list>
-    <ion-item *ngfor="let sala of salas">
+    <ion-item *ngFor="let sala of salas">
       {{sala.nome}}
       <ion-icon name="chatboxes" item-end="" (click)="acessarSala(sala.key)"></ion-icon>
     </ion-item>
