@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as firebase from 'firebase';
  
+import { LottieAnimationViewModule } from 'ng-lottie';
+
 @IonicPage()
 @Component({
   selector: 'page-adicionar-sala',
@@ -12,8 +14,18 @@ export class AdicionarSalaPage {
    para armazenar o nome da sala e acessá-la*/
   data = { nome:'' };
   ref = firebase.database().ref('salas/');
+
+  lottieConfig: any;
  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    LottieAnimationViewModule.forRoot();
+
+    this.lottieConfig = {
+      path: 'assets/preloader.json',
+      autoplay: true,
+      loop: true
+    }
   }
  
   adicionarSala() {

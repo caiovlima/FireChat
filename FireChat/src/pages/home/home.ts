@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, Content } from 'ionic-angular';
 import { SalaPage } from '../sala/sala';
 import * as firebase from 'firebase';
+
  
 @Component({
   selector: 'page-home',
@@ -14,12 +15,21 @@ export class HomePage {
   key:string;
   nickname:string;
   offStatus:boolean = false;
+
+  
+
+  
  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    
+    
     this.key = this.navParams.get("key") as string;
     this.nickname = this.navParams.get("nickname") as string;
     this.data.type = 'mensagem';
     this.data.nickname = this.nickname;
+
+    
    
     let joinData = firebase.database().ref('salas/'+this.key+'/chats').push();
     joinData.set({

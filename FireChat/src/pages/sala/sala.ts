@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AdicionarSalaPage } from '../adicionar-sala/adicionar-sala';
 import { HomePage } from '../home/home';
 import * as firebase from 'firebase';
+import { LottieAnimationViewModule } from 'ng-lottie';
  
 @IonicPage()
 @Component({
@@ -15,10 +16,20 @@ export class SalaPage {
 
   salas = []; 
   ref = firebase.database().ref('salas/');
+
+  lottieConfig: any;
  
   /*Adicione a seguinte função para receber 
   notificação de qualquer mudança no banco de dados firebase.*/
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    LottieAnimationViewModule.forRoot();
+    this. lottieConfig={
+      path: 'assets/smiley_stack.json',
+      autoplay: true,
+      loop: true
+    }
+
     this.ref.on('value', resp => {
       this.salas = [];
       this.salas = snapshotToArray(resp);

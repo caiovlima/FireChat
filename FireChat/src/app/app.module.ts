@@ -10,6 +10,8 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
 import { SalaPage } from './../pages/sala/sala';
 import { AdicionarSalaPage } from './../pages/adicionar-sala/adicionar-sala';
 
+import { LottieAnimationViewModule } from 'ng-lottie';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { AdicionarSalaPage } from './../pages/adicionar-sala/adicionar-sala';
     HomePage
   ],
   imports: [
+    LottieAnimationViewModule,
 
   BrowserModule,
     IonicModule.forRoot(MyApp)
